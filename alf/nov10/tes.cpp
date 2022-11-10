@@ -12,5 +12,13 @@ int main()
     cout<<"\nF";
     cout<<"\nG";
     cout<<"\nH";
+    cout<<"\nI";
+    cout<<"\nJ";
+    cout<<"\nK";
+    cout<<"\nL";
+    cout<<"\nM";
+    cout<<"\nN";
+    cout<<"\nO";
+    cout<<"\nP";
     return 0;
 }
