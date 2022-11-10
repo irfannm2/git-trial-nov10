@@ -20,5 +20,6 @@ int main()
     cout<<"\nN";
     cout<<"\nO";
     cout<<"\nP";
+    cout<<"\nPerubahan di git";
     return 0;
 }
