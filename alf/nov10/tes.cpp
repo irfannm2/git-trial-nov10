@@ -6,5 +6,6 @@ int main()
     cout<<"\nNovember 10";
     cout<<"\nA";
     cout<<"\nB";
+    cout<<"\nC";
     return 0;
 }
