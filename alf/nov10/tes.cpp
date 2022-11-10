@@ -9,5 +9,8 @@ int main()
     cout<<"\nC";
     cout<<"\nD";
     cout<<"\nE";
+    cout<<"\nF";
+    cout<<"\nG";
+    cout<<"\nH";
     return 0;
 }
