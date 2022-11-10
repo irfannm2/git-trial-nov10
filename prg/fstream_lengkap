@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+using namespace std;
+
+int main(){
+    ifstream _fh("data.txt");
+    string abc;
+    int data, data2;
+    int jml=0;
+    double rerata;
+    int cacah=0;
+    
+    ofstream hasil("hasil2.txt",ios::app);
+    
+    while(_fh>>data>>data2){
+        jml+=data;
+        cacah++;
+        hasil<<"Baca data ke-"<<cacah<<": "<<data<<" & "<<data2<<endl;
+    }
+    rerata=jml/cacah;
+    ofstream fh2("hasil.txt",ios::app);
+    fh2<<"Hasil rerata "<<cacah<<" data: "<<rerata<<endl;
+    cout<<rerata;
+    
+    return 0;
+}
