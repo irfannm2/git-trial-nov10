@@ -21,5 +21,6 @@ int main()
     cout<<"\nO";
     cout<<"\nP";
     cout<<"\nPerubahan di git";
+    cout<<"\nPerubahan di local";
     return 0;
 }
