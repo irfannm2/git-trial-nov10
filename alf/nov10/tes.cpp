@@ -7,5 +7,7 @@ int main()
     cout<<"\nA";
     cout<<"\nB";
     cout<<"\nC";
+    cout<<"\nD";
+    cout<<"\nE";
     return 0;
 }
