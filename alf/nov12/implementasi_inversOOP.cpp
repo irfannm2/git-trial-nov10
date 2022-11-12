@@ -1,0 +1,78 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+#define pi 3.14159265358979323846
+#define rad 180 / pi
+
+double l1 = 3.52, l2 = 9.5, l3 = 9.5, l4, l5, l6 = 1;
+double Q1, Q1A, Q1B, Q2, Q3, Q3A, Q3B, Q3C, Q4, Q5, Q6;
+double x1;
+double z1 = 3.52, z2, z3 = 1, ztot = 23;
+
+class Invers
+{
+
+public:
+	void length(void)
+	{
+		z2 = ztot - z1 - z3;
+		l5 = sqrt((z2 * z2) + (x1 * x1));
+		cout << "l5 = " << l5 << endl;
+	}
+	void sudut(void)
+	{
+		Q2 = acos((l2 * l2 + l3 * l3 - l5 * l5) / (2 * l2 * l3)) * rad;
+		Q1A = acos((l2 * l2 + l5 * l5 - l3 * l3) / (2 * l2 * l5)) * rad;
+		Q3A = acos((l3 * l3 + l5 * l5 - l2 * l2) / (2 * l3 * l5)) * rad;
+		Q4 = 180 - Q2;
+		Q1B = asin(x1 / l5) * rad;
+		Q1 = (Q1A + Q1B);
+		Q3C = acos(x1 / l5) * rad;
+		Q3B = acos(x1 / l6) * rad;
+		Q3 = Q3A + Q3B + Q3C;
+		Q5 = 180 - Q3;
+		Q6 = asin(x1 / l6) * rad;
+		Q6 -= Q5;
+	}
+};
+
+void inputx1()
+{
+poin1:
+	cout << "Input x1 = ";
+	cin >> x1;
+
+	if (x1 > 1)
+	{
+		cout << "kebanyakan bang" << endl;
+		goto poin1;
+	}
+}
+
+void print()
+{
+	cout << "Q1A = " << Q1A << endl;
+	cout << "Q1B = " << Q1B << endl;
+	cout << "Q1 = " << Q1 << endl;
+	cout << "Q2 = " << Q2 << endl;
+	cout << "Q3A = " << Q3A << endl;
+	cout << "Q3B = " << Q3B << endl;
+	cout << "Q3C = " << Q3C << endl;
+	cout << "Q3 = " << Q3 << endl;
+	cout << "Q4 = " << Q4 << endl;
+	cout << "Q5 = " << Q5 << endl;
+	cout << "Q6 = " << Q6 << endl;
+}
+
+int main()
+{
+	inputx1();
+	Invers length1;
+	length1.length();
+	Invers sudut1;
+	sudut1.sudut();
+	print();
+
+	return 0;
+}
